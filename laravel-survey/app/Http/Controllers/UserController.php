@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Answer;
 use App\Models\Question;
+use App\Models\Survey;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -29,4 +30,16 @@ class UserController extends Controller
             "questions" => $questions
         ], 200);
     }
+
+    public function getSurveys($id = null){
+            if($id != null){
+                $surveys = Survey::find($id);
+            }else{
+                $surveys = Survey::all();
+            } 
+            return response()->json([
+                "status" => "Success",
+                "survey" => $surveys
+            ], 200);
+        }
 }
