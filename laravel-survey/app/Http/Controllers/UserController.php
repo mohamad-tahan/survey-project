@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Answer;
+use App\Models\Question;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -19,5 +20,13 @@ class UserController extends Controller
             "status" => "Answers Added"
         ], 200);
 
+    }
+
+    public function getQuestions(Request $request,$id){
+        $questions = Question::where("survey_id", $id)->get();
+        return response()->json([
+            "status" => "Success",
+            "questions" => $questions
+        ], 200);
     }
 }
