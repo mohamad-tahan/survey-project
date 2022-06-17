@@ -30,3 +30,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::post('/add_survey', [AdminController::class, 'addSurvey']);
+Route::post('/add_question', [AdminController::class, 'addQuestion']);
