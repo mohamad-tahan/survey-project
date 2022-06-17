@@ -38,3 +38,4 @@ Route::get('/surveys/{id?}', [AdminController::class, 'getSurveys']);
 
 //User apis
 Route::post('/add_answer', [UserController::class, 'addAnswer']);
+Route::get('/questions/{id}', [UserController::class, 'getQuestions']);
