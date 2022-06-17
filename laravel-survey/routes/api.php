@@ -29,9 +29,12 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
+//Admin apis
 Route::post('/add_survey', [AdminController::class, 'addSurvey']);
 Route::post('/add_question', [AdminController::class, 'addQuestion']);
 
+Route::get('/surveys/{id?}', [AdminController::class, 'getSurveys']);
 
+
+//User apis
 Route::post('/add_answer', [UserController::class, 'addAnswer']);
