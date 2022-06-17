@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Answer;
 use App\Models\Survey;
 use Illuminate\Http\Request;
 use App\Models\Question;
@@ -29,6 +30,8 @@ class AdminController extends Controller
                 "status" => "Question Added"
             ], 200);
 
-}
+        }
+
+      
 
 }

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JWTController;
@@ -31,3 +32,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/add_survey', [AdminController::class, 'addSurvey']);
 Route::post('/add_question', [AdminController::class, 'addQuestion']);
+
+
+Route::post('/add_answer', [UserController::class, 'addAnswer']);
