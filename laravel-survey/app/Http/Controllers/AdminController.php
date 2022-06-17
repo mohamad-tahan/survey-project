@@ -32,18 +32,5 @@ class AdminController extends Controller
             "status" => "Question Added"
         ], 200);
     }
-
-    public function getSurveys($id = null)
-    {
-        if ($id != null) {
-            $surveys = Survey::find($id);
-        } else {
-            $surveys = Survey::all();
-        }
-
-        return response()->json([
-            "status" => "Success",
-            "Surveys: " => $surveys
-        ], 200);
-    }
+    
 }
