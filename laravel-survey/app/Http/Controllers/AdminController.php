@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Survey;
 use Illuminate\Http\Request;
+use App\Models\Question;
 
 class AdminController extends Controller
 {
@@ -15,5 +16,19 @@ class AdminController extends Controller
         return response()->json([
             "status" => "Survey Added"
         ], 200);
+    }
+        public function addQuestion(Request $request){
+            $question = new Question();
+            $question->question = $request->question;
+            $question->type = $request->type;
+            $question->survey_id = $request->survey_id;
+            $question->choices = $request->choices;
+            $question->save();
+            
+            return response()->json([
+                "status" => "Question Added"
+            ], 200);
+
 }
+
 }
