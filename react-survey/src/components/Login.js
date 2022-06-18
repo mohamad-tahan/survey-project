@@ -30,7 +30,7 @@ function Login() {
         
         localStorage.setItem("access_token", response["access_token"]);
         localStorage.setItem("token_type", JSON.stringify(response['token_type']));
-        window.location.href = "/adminSurvey";
+        window.location.href = "/addSurvey";
       } catch {
         alert("Failed");
         console.log(response);
