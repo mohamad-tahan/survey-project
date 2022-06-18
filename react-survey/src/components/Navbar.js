@@ -5,10 +5,10 @@ function Navbar(){
   <div className='nav'>
   
     <li>
-      <Link to="/viewsurveys">View Surveys</Link>
+      <Link to="/addquestions">Add Questions</Link>
     </li>
     <li>
-      <Link to="/adminSurvey">Add Survey</Link>
+      <Link to="/addSurvey">Add Survey</Link>
     </li>
 
   </div>
