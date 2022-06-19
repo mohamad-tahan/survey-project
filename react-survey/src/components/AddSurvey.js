@@ -18,6 +18,7 @@ const AddSurv = async() => {
         
         <div>
  <form className="add-form" >
+    <center>
          <Navbar />
         <div className="form-control">
           <label>Survey Name</label>
@@ -32,6 +33,7 @@ const AddSurv = async() => {
   
     
         <button onClick = {() => {AddSurv()}}> Add</button>
+        </center>
       </form>
         </div>
        

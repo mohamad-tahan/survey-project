@@ -65,9 +65,9 @@ function SelectType() {
   return (
     <div id="selectDiv">
       <div id="choices">
-        <h5>Enter SelectType Question</h5>
+        <h5>Dropdown Question</h5>
 
-        <label>Enter Question</label>
+        <label>Question</label>
         <input
           type="text"
           id="text"
@@ -99,7 +99,7 @@ function SelectType() {
             AddQuestion();
           }}
         >
-          Add Question
+          Add Dropdown
         </button>
       </div>
     </div>
