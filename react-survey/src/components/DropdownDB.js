@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 const DropdownDB = ({ question }) => {
+  const [input, setInput] = useState('');
+  console.log(input);
+  console.log(question.id);
   //    console.log(question)
 
   if (question.type === "select") {
@@ -19,9 +22,9 @@ const DropdownDB = ({ question }) => {
     return (
       <div>
       <h3>  {question.question} </h3>
-        <select>
+        <select onInput={e => setInput(e.target.value)}>
           {choice.map((i, index) => {
-            return <option>{choice[index]}</option>;
+            return <option value={choice[index]}  >{choice[index]}</option>;
           })}
         </select>
       </div>

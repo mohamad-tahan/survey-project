@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 const RadioDB = ({ question }) => {
+  const [input, setInput] = useState('');
+
+console.log(input);
+console.log(question.id);
+
   //    console.log(question)
 
   if (question.type === "radio") {
@@ -18,12 +23,14 @@ const RadioDB = ({ question }) => {
  
     return (
       <div>
-        <h3>  {question.question} </h3>
-        
+        <label> {question.question} </label>
+        <br/>  
         {choice.map((i, index) => {
-           return <label><input type="radio" name="radiobuttons" value={choice[index]} />    {choice[index]} <br/> </label> 
+           
+      
+           return <label><input type="radio" name={choice[index]} value={choice[index]}  onInput={e => setInput(e.target.value)}/>    {choice[index]} <br/> </label> 
           })}
-
+ <br/>
       </div>
     );
   }

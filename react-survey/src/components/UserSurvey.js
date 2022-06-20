@@ -8,6 +8,7 @@ import CheckBoxDB from "./CheckBoxDB";
 import DateDB from "./DateDB";
 import EmailDB from "./EmailDB";
 import NavUser from "./NavUser"
+import SubmitSurvey from "./SubmitSurvey";
 
 function UserSurvey() {
   // Initialize State
@@ -82,7 +83,7 @@ function UserSurvey() {
         })}
      
         <br /> 
-        <button className="submit">Submit</button>
+        <SubmitSurvey />
 
         </center>
       </div>

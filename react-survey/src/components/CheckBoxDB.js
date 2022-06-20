@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 const CheckBoxDb = ({ question }) => {
+  const [input, setInput] = useState('');
+  console.log(input);
+  console.log(question.id);
   //    console.log(question)
 
   if (question.type === "checkbox") {
@@ -21,7 +24,7 @@ const CheckBoxDb = ({ question }) => {
         <h3> {question.question} </h3>
         
         {choice.map((i, index) => {
-           return <label><input type="checkbox" name="radiobuttons" value={choice[index]} />    {choice[index]} <br/> </label> 
+           return <label><input type="checkbox" name="radiobuttons" value={choice[index]}   onInput={e => setInput(e.target.value)}/>    {choice[index]} <br/> </label> 
           })}
 
       </div>
