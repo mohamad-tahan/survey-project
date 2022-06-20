@@ -23,7 +23,7 @@ function TextType(){
         <div>
             <h5>TextType Question</h5>
             <input type="text" id="text" value={input} onInput={e => setInput(e.target.value)}/>
-            <button onClick={()=>{AddQuestion()}}>Add TextType Question</button>
+            <button className="btnAdmin" onClick={()=>{AddQuestion()}}>Add TextType Question</button>
             
             {/* <SelectType/>  */}
         </div>

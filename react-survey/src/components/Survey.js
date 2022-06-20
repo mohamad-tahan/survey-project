@@ -12,11 +12,16 @@ import Navbar from "./Navbar";
 
 function Survey(){
     return(
-    <div>
+        <div className="adm">
+             <Navbar />
+    <div className="adminSurvey">
         <center>
-            <Navbar />
-            <br/>
+           
         <TextType /> 
+        <br/>
+        <EmailType /> 
+        <br/>
+        <DateType /> 
         <br/>
         <SelectType />
         <br/>
@@ -27,7 +32,7 @@ function Survey(){
     
         </center>
 
-
+        </div>
     </div>
     )
 }

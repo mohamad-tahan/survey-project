@@ -83,7 +83,7 @@ function SelectType() {
           value={select}
           onInput={(e) => setSelect(e.target.value)}
         />
-        <button
+        <button className="btnAdmin"
           id="addChoices"
           onClick={() => {
             AddChoices();
@@ -94,7 +94,7 @@ function SelectType() {
         <br />
       </div>
       <div>
-        <button
+        <button className="btnAdmin"
           onClick={() => {
             AddQuestion();
           }}
