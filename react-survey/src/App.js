@@ -13,6 +13,8 @@ import Checkbox from './components/Checkbox';
 import DateType from './components/DateType';
 import EmailType from './components/EmailType';
 import Survey from './components/Survey';
+import UserSurvey from './components/UserSurvey';
+
 
 
 
@@ -28,7 +30,7 @@ function App() {
 
         <Routes>
 
-        <Route path="/login" element={<Login />}></Route>
+        <Route path="/" element={<Login />}></Route>
 
           <Route path="/addSurvey" element={<AddSurvey /> }></Route>
           <Route path="/addtextType" element={<TextType /> }></Route>
@@ -41,6 +43,8 @@ function App() {
 
           
           <Route path="/survey" element={<Survey /> }></Route>
+          <Route path="/userSurvey" element={<UserSurvey /> }></Route>
+         
 
         </Routes>
 
