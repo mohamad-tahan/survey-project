@@ -32,7 +32,7 @@ const AddSurv = async() => {
         </div>
   
     
-        <button onClick = {() => {AddSurv()}}> Add</button>
+        <button className="btnAdmin" onClick = {() => {AddSurv()}}> Add</button>
         </center>
       </form>
         </div>

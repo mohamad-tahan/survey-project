@@ -16,12 +16,12 @@ function EmailType(){
             type: "email",
             survey_id:1,
           }),
-        });
+        },alert("Question Added"));
     }
 
     return(
         <div>
-            <h5>Enter Email</h5>
+            <h5>EmailType Question</h5>
             <input type="email" id="email" value={input} onInput={e => setInput(e.target.value)}/>
             <button className="btnAdmin" onClick={()=>{AddEmail()}}>Add Email</button>
             

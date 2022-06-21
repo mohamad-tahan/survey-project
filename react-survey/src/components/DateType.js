@@ -16,12 +16,12 @@ function DateType(){
             type: "date",
             survey_id:1,
           }),
-        });
+        },alert("Question Added"));
     }
 
     return(
         <div>
-            <h5>Enter Date</h5>
+            <h5>DateType Question</h5>
             <input type="text" id="date" value={input} onInput={e => setInput(e.target.value)}/>
             <button className="btnAdmin" onClick={()=>{AddDate()}}>Add Date</button>
             

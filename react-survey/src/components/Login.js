@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-console.log("Login Page");
-
 async function loginUser(credentials) {
 
   return fetch("http://127.0.0.1:8000/api/login", {

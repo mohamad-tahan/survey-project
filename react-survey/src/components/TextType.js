@@ -16,7 +16,8 @@ function TextType(){
             type: "text",
             survey_id:1,
           }),
-        });
+          
+        },alert("Question Added"));
     }
 
     return(

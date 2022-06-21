@@ -23,14 +23,14 @@ console.log(question.id);
  
     return (
       <div>
-        <label> {question.question} </label>
-        <br/>  
+        <h3> {question.question} </h3>
+       
         {choice.map((i, index) => {
            
       
-           return <label><input type="radio" name={choice[index]} value={choice[index]}  onInput={e => setInput(e.target.value)}/>    {choice[index]} <br/> </label> 
+           return <label><input type="radio" name="radiobuttons" value={choice[index]}  onInput={e => setInput(e.target.value)}/>    {choice[index]} <br/> </label> 
           })}
- <br/>
+
       </div>
     );
   }
